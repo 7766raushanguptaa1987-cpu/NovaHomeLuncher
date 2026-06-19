@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="onui_bg">#FF121212</color>
+    <color name="onui_surface">#FF1E1E1E</color>
+    <color name="onui_text_primary">#FFFFFFFF</color>
+    <color name="onui_text_secondary">#99FFFFFF</color>
+    <color name="onui_accent">#FF1A73E8</color>
+    <color name="onui_icon_bg">#29FFFFFF</color>
+    <color name="onui_hotseat_bg">#CC000000</color>
+    <color name="onui_drawer_bg">#F0121212</color>
+    <color name="onui_card_bg">#FF1E1E1E</color>
+    <color name="gaming_accent">#FF00BFA5</color>
+    <color name="gaming_bg">#FF0A0A0A</color>
+    <color name="gaming_card">#FF1A1A1A</color>
+</resources>

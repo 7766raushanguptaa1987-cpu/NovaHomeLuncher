@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main home screen stack -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Clock / Date header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="52dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/clockText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFFFF"
+                android:textSize="52sp"
+                android:fontFamily="sans-serif-light"
+                android:text="12:00" />
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#99FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginTop="2dp"
+                android:text="Monday, Jan 1" />
+        </LinearLayout>
+
+        <!-- Swipeable home pages -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/homePager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Page indicator dots -->
+        <LinearLayout
+            android:id="@+id/pageIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp" />
+
+        <!-- Bottom dock / hotseat -->
+        <LinearLayout
+            android:id="@+id/hotseat"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_hotseat"
+            android:paddingHorizontal="16dp">
+
+            <ImageView android:id="@+id/hotseatSlot1"
+                android:layout_width="52dp" android:layout_height="52dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_icon_rounded"
+                android:scaleType="fitCenter" android:padding="6dp" />
+
+            <ImageView android:id="@+id/hotseatSlot2"
+                android:layout_width="52dp" android:layout_height="52dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_icon_rounded"
+                android:scaleType="fitCenter" android:padding="6dp" />
+
+            <ImageView android:id="@+id/hotseatSlot3"
+                android:layout_width="52dp" android:layout_height="52dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_icon_rounded"
+                android:scaleType="fitCenter" android:padding="6dp" />
+
+            <ImageView android:id="@+id/hotseatSlot4"
+                android:layout_width="52dp" android:layout_height="52dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_icon_rounded"
+                android:scaleType="fitCenter" android:padding="6dp"
+                android:visibility="gone" />
+
+            <!-- Apps grid button (last slot) -->
+            <ImageView android:id="@+id/appsButton"
+                android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/bg_icon_accent"
+                android:scaleType="fitCenter" android:padding="10dp"
+                android:src="@drawable/ic_apps" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Transparent swipe-up catcher over the hotseat area -->
+    <View
+        android:id="@+id/swipeUpCatcher"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent" />
+
+    <!-- App Drawer overlay -->
+    <include android:id="@+id/appDrawer"
+        layout="@layout/view_app_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+    <!-- Home Edit mode bottom sheet (long-press home) -->
+    <include android:id="@+id/homeEditSheet"
+        layout="@layout/sheet_home_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone" />
+
+    <!-- Dim overlay for edit mode -->
+    <View
+        android:id="@+id/dimOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone" />
+
+</FrameLayout>

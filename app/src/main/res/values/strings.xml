@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nova Home</string>
+    <string name="search_apps_hint">Search apps…</string>
+    <string name="home_settings">Home settings</string>
+    <string name="wallpaper">Wallpaper</string>
+    <string name="widgets">Widgets</string>
+    <string name="themes">Themes</string>
+    <string name="hide_apps">Hide apps</string>
+    <string name="gaming_hub">Gaming Hub</string>
+    <string name="app_info">App info</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="game_mode">Game mode</string>
+    <string name="no_games">No games found</string>
+    <string name="hidden_apps_title">Hidden Apps</string>
+    <string name="launcher_settings_title">Home Settings</string>
+</resources>
